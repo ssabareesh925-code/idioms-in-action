@@ -4,33 +4,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#171916">
-  <meta name="description" content="IDIOMS IN ACTION — Team 07 Digital English Exhibition. Explore twenty English idioms through visual interpretations, language and creativity.">
-
-  <title>IDIOMS IN ACTION</title>
+  <meta name="theme-color" content="#11110f">
+  <meta name="description" content="IDIOMS IN ACTION – Team 07 English exhibition. Discover 20 English idioms through creative posters, activities and presentations.">
+  <title>IDIOMS IN ACTION | Team 07</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg: #171916;
-      --surface: #20221e;
-      --surface2: #272923;
-      --gold: #c9a86a;
-      --gold-light: #e4ca91;
-      --cream: #f1ecdf;
-      --muted: #a5a398;
-      --border: rgba(201,168,106,.19);
+      --bg: #11110f;
+      --surface: #191916;
+      --surface-light: #22221d;
+      --gold: #c9a66b;
+      --gold-light: #e6ca98;
+      --text: #f4f0e8;
+      --muted: #a9a49a;
+      --line: rgba(201,166,107,.22);
       --serif: "Playfair Display", Georgia, serif;
       --sans: "DM Sans", Arial, sans-serif;
     }
 
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     html {
@@ -40,9 +39,9 @@
 
     body {
       background: var(--bg);
-      color: var(--cream);
+      color: var(--text);
       font-family: var(--sans);
-      line-height: 1.7;
+      line-height: 1.6;
       overflow-x: hidden;
     }
 
@@ -59,64 +58,75 @@
       cursor: pointer;
     }
 
-    ::selection {
-      background: var(--gold);
-      color: var(--bg);
-    }
-
     .container {
       width: min(1160px, 90%);
       margin: auto;
     }
 
+    .gold {
+      color: var(--gold-light);
+    }
+
     .eyebrow {
+      display: inline-block;
       color: var(--gold);
-      font-size: .72rem;
+      font-size: 11px;
       font-weight: 700;
       letter-spacing: 3px;
       text-transform: uppercase;
     }
 
+    .section {
+      padding: 100px 0;
+    }
+
     .section-heading {
+      max-width: 700px;
+      margin-bottom: 42px;
+    }
+
+    .section-heading h2 {
       font-family: var(--serif);
-      font-size: clamp(2.1rem, 5vw, 3.5rem);
-      line-height: 1.2;
+      font-size: clamp(34px, 5vw, 53px);
+      font-weight: 600;
+      line-height: 1.15;
+      margin: 13px 0;
+    }
+
+    .section-heading h2 em {
+      color: var(--gold-light);
       font-weight: 500;
-      margin: 12px 0;
     }
 
-    .section-description {
+    .section-heading p {
       color: var(--muted);
-      max-width: 620px;
-      font-size: .96rem;
+      max-width: 590px;
     }
 
-    /* NAVIGATION */
+    /* Navigation */
 
     .navbar {
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(23,25,22,.94);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--border);
+      background: rgba(17,17,15,.94);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--line);
     }
 
     .nav-inner {
-      width: min(1160px, 90%);
-      height: 76px;
-      margin: auto;
+      min-height: 74px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       gap: 25px;
     }
 
     .brand {
       font-family: var(--serif);
-      font-size: 1.25rem;
+      font-size: 22px;
       font-weight: 700;
-      letter-spacing: 1px;
+      letter-spacing: .5px;
       white-space: nowrap;
     }
 
@@ -127,14 +137,13 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 30px;
+      gap: 25px;
     }
 
     .nav-links a {
-      color: #c3c0b5;
-      font-size: .77rem;
+      color: #c8c2b7;
+      font-size: 12px;
       font-weight: 600;
-      letter-spacing: 1px;
       transition: color .2s;
     }
 
@@ -145,42 +154,43 @@
     .menu-toggle {
       display: none;
       background: none;
-      color: var(--cream);
-      border: 1px solid var(--border);
-      padding: 7px 12px;
-      border-radius: 4px;
-      font-size: 1.2rem;
+      border: 1px solid var(--line);
+      color: var(--text);
+      border-radius: 7px;
+      padding: 8px 12px;
+      font-size: 20px;
     }
 
-    /* HERO */
+    /* Hero */
 
     .hero {
-      min-height: 630px;
+      min-height: 660px;
       display: flex;
       align-items: center;
       position: relative;
       overflow: hidden;
-      border-bottom: 1px solid var(--border);
+      border-bottom: 1px solid var(--line);
       background:
-        radial-gradient(ellipse at 82% 48%, rgba(201,168,106,.12), transparent 38%),
-        linear-gradient(120deg, #171916 45%, #20221e);
+        radial-gradient(ellipse at 80% 35%, rgba(174,132,69,.14), transparent 38%),
+        radial-gradient(ellipse at 10% 85%, rgba(174,132,69,.07), transparent 35%),
+        var(--bg);
     }
 
     .hero::after {
-      content: "A";
+      content: "WORDS";
       position: absolute;
-      right: 7%;
-      top: 5%;
+      right: -35px;
+      bottom: -80px;
       font-family: var(--serif);
-      font-size: clamp(22rem, 45vw, 42rem);
-      line-height: 1;
-      color: rgba(201,168,106,.035);
+      font-size: clamp(130px, 24vw, 330px);
+      font-weight: 700;
+      color: rgba(201,166,107,.035);
       pointer-events: none;
     }
 
     .hero-content {
       position: relative;
-      z-index: 1;
+      z-index: 2;
       max-width: 800px;
       padding: 100px 0;
     }
@@ -188,88 +198,100 @@
     .hero-label {
       display: inline-flex;
       align-items: center;
-      gap: 12px;
-      border: 1px solid var(--border);
+      gap: 10px;
+      border: 1px solid var(--line);
       padding: 9px 15px;
+      border-radius: 30px;
       color: var(--gold-light);
-      font-size: .72rem;
+      font-size: 10px;
+      font-weight: 700;
       letter-spacing: 2px;
-      margin-bottom: 30px;
+      margin-bottom: 28px;
     }
 
     .hero-label::before {
       content: "";
       width: 7px;
       height: 7px;
-      background: var(--gold);
       border-radius: 50%;
+      background: var(--gold);
     }
 
     .hero h1 {
       font-family: var(--serif);
-      font-size: clamp(3.8rem, 10vw, 7.4rem);
-      line-height: .99;
-      letter-spacing: -3px;
-      font-weight: 500;
+      font-size: clamp(48px, 8vw, 92px);
+      line-height: 1.02;
+      font-weight: 600;
+      letter-spacing: -2px;
+      max-width: 850px;
     }
 
     .hero h1 span {
-      display: block;
-      color: var(--gold);
+      color: var(--gold-light);
       font-style: italic;
     }
 
-    .hero-text {
-      max-width: 570px;
-      color: #b9b6aa;
-      margin: 27px 0 34px;
-      font-size: 1rem;
+    .hero-description {
+      color: #b7b1a7;
+      font-size: 16px;
+      max-width: 580px;
+      margin: 25px 0 32px;
+      line-height: 1.9;
     }
 
-    .primary-btn {
+    .hero-actions {
+      display: flex;
+      gap: 13px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
       display: inline-flex;
       align-items: center;
-      gap: 18px;
-      background: var(--gold);
-      color: #171916;
-      padding: 14px 23px;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 23px;
+      border-radius: 5px;
+      font-size: 12px;
       font-weight: 700;
-      font-size: .82rem;
+      letter-spacing: .5px;
       transition: .25s;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: #17140f;
       border: 1px solid var(--gold);
     }
 
-    .primary-btn:hover {
+    .btn-primary:hover {
       background: var(--gold-light);
-      transform: translateY(-3px);
+      transform: translateY(-2px);
     }
 
-    .hero-note {
-      margin-top: 65px;
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      color: var(--muted);
-      font-size: .75rem;
-      letter-spacing: 1px;
+    .btn-outline {
+      border: 1px solid var(--line);
+      color: var(--text);
     }
 
-    .hero-note span {
-      color: var(--gold);
+    .btn-outline:hover {
+      border-color: var(--gold);
+      color: var(--gold-light);
     }
 
-    /* STATISTICS */
+    /* Stats */
 
     .stats {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      border-bottom: 1px solid var(--border);
+      border-bottom: 1px solid var(--line);
+      background: #151512;
     }
 
     .stat {
-      padding: 32px 15px;
+      padding: 29px 15px;
       text-align: center;
-      border-right: 1px solid var(--border);
+      border-right: 1px solid var(--line);
     }
 
     .stat:last-child {
@@ -278,162 +300,162 @@
 
     .stat strong {
       display: block;
+      color: var(--gold-light);
       font-family: var(--serif);
-      color: var(--gold);
-      font-size: 2.3rem;
-      font-weight: 500;
+      font-size: 32px;
     }
 
     .stat span {
+      display: block;
       color: var(--muted);
-      font-size: .72rem;
+      font-size: 10px;
       letter-spacing: 2px;
       text-transform: uppercase;
+      margin-top: 4px;
     }
 
-    /* ABOUT */
-
-    section {
-      padding: 105px 0;
-    }
+    /* About */
 
     .about-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 85px;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 65px;
       align-items: center;
     }
 
     .about-copy p {
-      color: #b7b5aa;
-      font-size: .96rem;
-      margin-top: 20px;
+      color: var(--muted);
+      margin: 16px 0;
+      line-height: 1.95;
+      font-size: 14px;
     }
 
-    .about-quote {
-      padding: 40px;
-      background: var(--surface);
-      border-left: 2px solid var(--gold);
+    .about-panel {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 35px;
+      background:
+        linear-gradient(145deg, rgba(201,166,107,.08), transparent 70%),
+        var(--surface);
     }
 
-    .about-quote blockquote {
-      font-family: var(--serif);
-      font-size: clamp(1.7rem, 4vw, 2.6rem);
-      line-height: 1.4;
-      color: var(--cream);
-    }
-
-    .about-quote span {
-      display: block;
+    .about-panel .quote-mark {
       color: var(--gold);
-      margin-top: 20px;
-      font-size: .7rem;
-      letter-spacing: 2px;
+      font-family: var(--serif);
+      font-size: 65px;
+      line-height: .8;
     }
 
-    /* GALLERY */
+    .about-panel h3 {
+      font-family: var(--serif);
+      font-size: 25px;
+      margin: 16px 0;
+    }
+
+    .about-panel p {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.9;
+    }
+
+    /* Gallery */
 
     .gallery-section {
-      background: #1c1e1a;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
+      background: #151512;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
     }
 
-    .gallery-top {
+    .gallery-toolbar {
       display: flex;
+      align-items: center;
       justify-content: space-between;
-      align-items: end;
-      gap: 25px;
-      margin-bottom: 40px;
+      gap: 18px;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
     }
 
     .gallery-count {
-      color: var(--gold);
-      font-size: .75rem;
-      letter-spacing: 2px;
-      white-space: nowrap;
-    }
-
-    .gallery-tools {
-      display: flex;
-      gap: 12px;
-      margin-bottom: 30px;
+      color: var(--muted);
+      font-size: 12px;
     }
 
     .search-box {
-      width: 100%;
-      max-width: 370px;
-      background: var(--surface);
-      color: var(--cream);
-      border: 1px solid var(--border);
-      padding: 13px 16px;
+      width: min(320px, 100%);
+      background: #20201b;
+      border: 1px solid var(--line);
+      color: var(--text);
+      padding: 12px 15px;
+      border-radius: 5px;
       outline: none;
-      font-size: .85rem;
+      font-size: 13px;
     }
 
     .search-box:focus {
       border-color: var(--gold);
     }
 
-    .search-box::placeholder {
-      color: #77776e;
-    }
-
-    .gallery {
+    .gallery-grid {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 23px;
+      gap: 19px;
     }
 
     .poster-card {
       min-width: 0;
       background: var(--surface);
-      border: 1px solid var(--border);
-      transition: transform .3s, border-color .3s;
+      border: 1px solid var(--line);
+      border-radius: 8px;
       overflow: hidden;
-      animation: appear .55s both;
+      transition: transform .25s, border-color .25s;
     }
 
     .poster-card:hover {
-      transform: translateY(-6px);
-      border-color: var(--gold);
+      transform: translateY(-5px);
+      border-color: rgba(201,166,107,.7);
     }
 
-    .poster-image {
-      width: 100%;
+    .poster-image-wrap {
       aspect-ratio: 3 / 4;
-      background: #292b25;
-      display: block;
-      object-fit: contain;
-      transition: transform .4s;
-      cursor: zoom-in;
+      background: #24231e;
+      position: relative;
+      overflow: hidden;
     }
 
-    .poster-card:hover .poster-image {
+    .poster-image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+      cursor: zoom-in;
+      transition: transform .35s;
+    }
+
+    .poster-card:hover img {
       transform: scale(1.025);
     }
 
-    .poster-image.image-error {
+    .poster-image-wrap img.image-error {
       display: none;
     }
 
     .image-fallback {
-      aspect-ratio: 3 / 4;
       display: none;
+      position: absolute;
+      inset: 0;
+      padding: 20px;
+      text-align: center;
       align-items: center;
       justify-content: center;
       flex-direction: column;
-      gap: 12px;
-      background: #252720;
       color: var(--muted);
-      text-align: center;
-      padding: 15px;
+      font-size: 12px;
+      gap: 8px;
     }
 
     .image-fallback strong {
-      color: var(--gold);
-      font-family: var(--serif);
-      font-size: 2rem;
+      color: var(--gold-light);
+      font-size: 15px;
     }
 
     .image-fallback.visible {
@@ -441,248 +463,273 @@
     }
 
     .poster-info {
-      padding: 17px;
-      border-top: 1px solid var(--border);
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
     }
 
-    .poster-number {
-      font-size: .65rem;
+    .poster-info strong {
+      font-size: 12px;
+      letter-spacing: .4px;
+    }
+
+    .poster-info span {
       color: var(--gold);
-      letter-spacing: 2px;
-      font-weight: 700;
+      font-size: 10px;
+      white-space: nowrap;
     }
 
-    .poster-info h3 {
-      font-family: var(--serif);
-      font-weight: 500;
-      font-size: 1.12rem;
-      margin-top: 5px;
-    }
-
-    .poster-info p {
-      color: var(--muted);
-      font-size: .73rem;
-      margin-top: 4px;
-    }
-
-    .poster-open {
-      display: block;
-      width: 100%;
-      text-align: left;
-      background: none;
-      color: var(--gold-light);
-      border: none;
-      margin-top: 13px;
-      font-size: .72rem;
-      letter-spacing: 1px;
-    }
-
-    .poster-open:hover {
-      color: white;
-    }
-
-    .no-results {
+    .empty-state {
       display: none;
-      color: var(--muted);
-      padding: 35px 0;
       text-align: center;
+      padding: 45px 15px;
+      color: var(--muted);
     }
 
-    /* ACTIVITIES */
+    /* Activities */
 
-    .activities-grid {
+    .activity-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-      margin-top: 45px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
     }
 
     .activity-card {
-      padding: 35px;
       background: var(--surface);
-      border: 1px solid var(--border);
-      min-height: 255px;
-      position: relative;
+      border: 1px solid var(--line);
+      padding: 28px;
+      border-radius: 8px;
     }
 
     .activity-number {
       color: var(--gold);
       font-family: var(--serif);
-      font-size: 2.8rem;
+      font-size: 32px;
     }
 
     .activity-card h3 {
       font-family: var(--serif);
-      font-size: 1.65rem;
-      font-weight: 500;
-      margin: 8px 0;
+      font-size: 21px;
+      margin: 14px 0 10px;
     }
 
     .activity-card p {
       color: var(--muted);
-      font-size: .88rem;
+      font-size: 13px;
+      line-height: 1.8;
     }
 
-    .activity-meta {
-      margin-top: 23px;
-      padding-top: 17px;
-      border-top: 1px solid var(--border);
-      color: var(--gold-light);
-      font-size: .72rem;
-      letter-spacing: 1px;
-    }
-
-    /* TEAM */
+    /* Team */
 
     .team-section {
-      background: #1c1e1a;
-      border-top: 1px solid var(--border);
+      background: #151512;
+      border-top: 1px solid var(--line);
     }
 
     .team-grid {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 15px;
-      margin-top: 45px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
     }
 
     .team-card {
-      padding: 25px 15px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      text-align: center;
-      transition: border-color .25s, transform .25s;
+      min-height: 220px;
+      padding: 27px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: linear-gradient(145deg, rgba(201,166,107,.055), transparent 75%), var(--surface);
+      transition: transform .25s, border-color .25s;
     }
 
     .team-card:hover {
-      border-color: var(--gold);
-      transform: translateY(-5px);
+      transform: translateY(-4px);
+      border-color: rgba(201,166,107,.65);
     }
 
-    .team-initial {
-      width: 58px;
-      height: 58px;
-      border: 1px solid var(--gold);
+    .team-number {
       color: var(--gold);
-      display: grid;
-      place-items: center;
-      border-radius: 50%;
-      margin: 0 auto 18px;
-      font-family: var(--serif);
-      font-size: 1.5rem;
+      font-size: 11px;
+      letter-spacing: 2px;
     }
 
     .team-card h3 {
       font-family: var(--serif);
-      font-size: 1.1rem;
-      font-weight: 500;
+      font-size: 22px;
+      margin: 17px 0 7px;
     }
 
-    .team-card p {
+    .team-role {
+      color: var(--gold-light) !important;
+      font-size: 11px !important;
+      font-weight: 700;
+      letter-spacing: .4px;
+      margin-bottom: 12px;
+    }
+
+    .team-card p:last-child {
       color: var(--muted);
-      font-size: .72rem;
-      margin-top: 7px;
+      font-size: 12px;
+      line-height: 1.8;
     }
 
-    .team-note {
-      color: var(--muted);
-      font-size: .82rem;
-      text-align: center;
-      margin-top: 30px;
-    }
-
-    /* QR SECTION */
+    /* QR */
 
     .qr-section {
-      padding: 75px 0;
+      padding: 90px 0;
     }
 
     .qr-panel {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 35px;
+      align-items: center;
+      padding: 45px;
+      background:
+        radial-gradient(circle at 80% 50%, rgba(201,166,107,.12), transparent 35%),
+        var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+    }
+
+    .qr-panel h2 {
+      font-family: var(--serif);
+      font-size: clamp(30px, 4vw, 43px);
+      margin: 12px 0;
+    }
+
+    .qr-panel p {
+      color: var(--muted);
+      max-width: 560px;
+      font-size: 13px;
+      line-height: 1.9;
+    }
+
+    .qr-frame {
+      width: 175px;
+      height: 175px;
+      background: #fff;
+      border-radius: 8px;
+      padding: 10px;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 35px;
-      padding: 40px;
-      border: 1px solid var(--border);
-      background: var(--surface);
+      justify-content: center;
     }
 
-    .qr-copy {
-      max-width: 550px;
+    .qr-frame img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
 
-    .qr-copy h2 {
-      font-family: var(--serif);
-      font-size: 2rem;
-      font-weight: 500;
-      margin: 10px 0;
+    .qr-caption {
+      text-align: center;
+      font-size: 10px;
+      color: var(--gold);
+      margin-top: 10px;
+      letter-spacing: 1px;
     }
 
-    .qr-copy p {
-      color: var(--muted);
-      font-size: .85rem;
-    }
-
-    .qr-image {
-      background: white;
-      padding: 12px;
-      width: 155px;
-      height: 155px;
-      flex-shrink: 0;
-    }
-
-    /* FOOTER */
+    /* Footer and credits */
 
     footer {
-      padding: 45px 0 25px;
-      border-top: 1px solid var(--border);
-      text-align: center;
+      background: #0c0c0a;
+      border-top: 1px solid var(--line);
+    }
+
+    .footer-main {
+      padding: 55px 0 35px;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 40px;
     }
 
     .footer-brand {
       font-family: var(--serif);
-      font-size: 1.5rem;
-      letter-spacing: 2px;
+      font-size: 27px;
+      margin-bottom: 12px;
     }
 
     .footer-brand span {
       color: var(--gold);
     }
 
-    .footer-tagline {
+    .footer-main p {
       color: var(--muted);
-      font-family: var(--serif);
-      font-style: italic;
-      margin: 12px 0 28px;
+      font-size: 12px;
+      line-height: 1.9;
+      max-width: 430px;
     }
 
-    .footer-line {
-      height: 1px;
-      background: var(--border);
-      margin: 25px 0;
+    .footer-links {
+      display: flex;
+      justify-content: flex-end;
+      align-content: flex-start;
+      flex-wrap: wrap;
+      gap: 18px;
     }
 
-    .developer {
+    .footer-links a {
+      color: #b9b2a7;
+      font-size: 11px;
+    }
+
+    .footer-links a:hover {
       color: var(--gold-light);
-      font-size: .78rem;
-      letter-spacing: 1.5px;
-      font-weight: 600;
+    }
+
+    .credits {
+      border-top: 1px solid var(--line);
+      padding: 28px 0 25px;
+      text-align: center;
+    }
+
+    .credits-label {
+      color: var(--gold);
+      font-size: 10px;
+      letter-spacing: 3px;
+      font-weight: 700;
+      margin-bottom: 13px;
+    }
+
+    .credits-main {
+      font-family: var(--serif);
+      font-size: 21px;
+      color: var(--text);
+      margin-bottom: 5px;
+    }
+
+    .credits-role {
+      color: var(--gold-light);
+      font-size: 11px;
+      letter-spacing: .8px;
+    }
+
+    .credits-sub {
+      color: #817b71;
+      font-size: 10px;
+      margin-top: 13px;
+      letter-spacing: 1px;
     }
 
     .copyright {
-      color: #77776e;
-      font-size: .7rem;
-      margin-top: 8px;
+      text-align: center;
+      padding: 15px;
+      border-top: 1px solid rgba(201,166,107,.1);
+      color: #716c63;
+      font-size: 10px;
     }
 
-    /* POSTER MODAL */
+    /* Poster modal */
 
     .modal {
-      display: none;
       position: fixed;
       inset: 0;
-      z-index: 200;
+      z-index: 500;
       background: rgba(0,0,0,.94);
+      display: none;
       align-items: center;
       justify-content: center;
       padding: 25px;
@@ -693,90 +740,89 @@
     }
 
     .modal-content {
+      position: relative;
+      width: min(850px, 90vw);
+      height: min(88vh, 1000px);
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 20px;
-      max-width: 100%;
-      max-height: 100%;
     }
 
-    .modal img {
-      max-width: min(76vw, 650px);
-      max-height: 83vh;
+    .modal-content img {
+      max-width: 100%;
+      max-height: 100%;
       object-fit: contain;
-      background: #24251f;
+      border-radius: 4px;
     }
 
     .modal-close,
-    .modal-arrow {
+    .modal-prev,
+    .modal-next {
       position: absolute;
-      background: rgba(35,35,30,.9);
-      border: 1px solid var(--border);
+      z-index: 2;
+      border: 1px solid rgba(255,255,255,.25);
+      background: rgba(20,20,18,.85);
       color: white;
-      display: grid;
-      place-items: center;
+      border-radius: 50%;
       width: 43px;
       height: 43px;
-      font-size: 1.5rem;
+      display: grid;
+      place-items: center;
+      font-size: 22px;
     }
 
     .modal-close {
-      top: 20px;
-      right: 20px;
+      top: -12px;
+      right: -12px;
     }
 
     .modal-prev {
-      left: 20px;
+      left: -55px;
+      top: 50%;
     }
 
     .modal-next {
-      right: 20px;
+      right: -55px;
+      top: 50%;
     }
 
-    .modal-caption {
+    .modal-counter {
       position: absolute;
-      bottom: 18px;
-      left: 0;
-      right: 0;
-      text-align: center;
-      color: var(--gold-light);
-      font-size: .78rem;
+      bottom: -32px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #d0c7b8;
+      font-size: 11px;
       letter-spacing: 2px;
     }
 
-    /* ANIMATIONS */
-
-    @keyframes appear {
-      from {
-        opacity: 0;
-        transform: translateY(15px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* RESPONSIVE */
+    /* Responsive */
 
     @media (max-width: 900px) {
-      .gallery {
-        grid-template-columns: repeat(3, 1fr);
-      }
-
-      .team-grid {
-        grid-template-columns: repeat(3, 1fr);
+      .gallery-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
       }
 
       .about-grid {
-        gap: 35px;
+        gap: 30px;
+      }
+
+      .team-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .nav-links {
+        gap: 14px;
       }
     }
 
     @media (max-width: 650px) {
+      .section {
+        padding: 72px 0;
+      }
+
       .nav-inner {
-        height: 66px;
+        min-height: 66px;
       }
 
       .menu-toggle {
@@ -789,12 +835,12 @@
         top: 66px;
         left: 0;
         right: 0;
-        background: #1c1e1a;
-        border-bottom: 1px solid var(--border);
-        padding: 22px 5%;
+        padding: 20px 5%;
+        background: #151512;
+        border-bottom: 1px solid var(--line);
         flex-direction: column;
         align-items: flex-start;
-        gap: 19px;
+        gap: 18px;
       }
 
       .nav-links.active {
@@ -802,99 +848,88 @@
       }
 
       .hero {
-        min-height: 570px;
-      }
-
-      .hero h1 {
-        letter-spacing: -2px;
+        min-height: 590px;
       }
 
       .hero-content {
         padding: 75px 0;
       }
 
-      .hero-note {
-        margin-top: 45px;
-        flex-wrap: wrap;
+      .hero h1 {
+        letter-spacing: -1px;
       }
 
-      section {
-        padding: 75px 0;
+      .hero-description {
+        font-size: 14px;
       }
 
-      .about-grid,
-      .activities-grid {
+      .about-grid {
         grid-template-columns: 1fr;
       }
 
-      .gallery-top {
-        display: block;
-      }
-
-      .gallery-count {
-        display: block;
-        margin-top: 12px;
-      }
-
-      .gallery {
+      .gallery-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 12px;
       }
 
-      .poster-info {
-        padding: 12px;
-      }
-
-      .poster-info h3 {
-        font-size: .98rem;
+      .activity-grid {
+        grid-template-columns: 1fr;
       }
 
       .team-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+      }
+
+      .team-card {
+        min-height: auto;
       }
 
       .qr-panel {
-        flex-direction: column;
-        text-align: center;
+        grid-template-columns: 1fr;
         padding: 28px;
+      }
+
+      .qr-frame {
+        margin: auto;
+      }
+
+      .footer-main {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-links {
+        justify-content: flex-start;
       }
 
       .modal {
         padding: 15px;
       }
 
-      .modal img {
-        max-width: 90vw;
-        max-height: 75vh;
+      .modal-content {
+        width: 88vw;
       }
 
       .modal-prev {
-        left: 8px;
+        left: 0;
       }
 
       .modal-next {
-        right: 8px;
+        right: 0;
       }
 
-      .modal-arrow {
-        top: 50%;
-        transform: translateY(-50%);
+      .modal-close {
+        top: -10px;
+        right: -5px;
       }
     }
 
-    @media (max-width: 370px) {
-      .gallery {
+    @media (max-width: 360px) {
+      .gallery-grid {
         grid-template-columns: 1fr;
       }
-    }
 
-    @media (prefers-reduced-motion: reduce) {
-      *,
-      *::before,
-      *::after {
-        scroll-behavior: auto !important;
-        animation-duration: .01ms !important;
-        transition-duration: .01ms !important;
+      .poster-image-wrap {
+        aspect-ratio: 4 / 5;
       }
     }
   </style>
@@ -903,313 +938,272 @@
 <body>
 
   <!-- NAVIGATION -->
-
   <header class="navbar">
-    <div class="nav-inner">
+    <div class="container nav-inner">
+      <a href="#home" class="brand">IDIOMS <span>IN ACTION</span></a>
 
-      <a href="#home" class="brand">
-        IDIOMS <span>IN ACTION</span>
-      </a>
-
-      <button class="menu-toggle" id="menuToggle"
-        aria-label="Toggle navigation" aria-expanded="false">
-        ☰
-      </button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
 
       <nav class="nav-links" id="navLinks">
+        <a href="#home">HOME</a>
         <a href="#about">ABOUT</a>
-        <a href="#gallery">POSTERS</a>
+        <a href="#gallery">20 IDIOMS</a>
         <a href="#activities">ACTIVITIES</a>
-        <a href="#team">TEAM</a>
+        <a href="#team">OUR TEAM</a>
+        <a href="#scan">SCAN QR</a>
       </nav>
-
     </div>
   </header>
 
   <main>
 
     <!-- HERO -->
-
     <section class="hero" id="home">
-      <div class="container">
-        <div class="hero-content">
+      <div class="container hero-content">
+        <div class="hero-label">TEAM 07 · ENGLISH EXHIBITION</div>
 
-          <div class="hero-label">
-            TEAM 07 · ENGLISH EXHIBITION
-          </div>
+        <h1>IDIOMS<br><span>IN ACTION.</span></h1>
 
-          <h1>
-            IDIOMS IN
-            <span>ACTION.</span>
-          </h1>
+        <p class="hero-description">
+          Beyond ordinary words lies a world of expression.
+          Explore the meaning, creativity and real-life use of
+          20 English idioms through our visual exhibition.
+        </p>
 
-          <p class="hero-text">
-            Discover the beauty of English through expressions
-            that say more than words. Explore twenty idioms,
-            their meanings and the creativity behind each
-            visual interpretation.
-          </p>
-
-          <a href="#gallery" class="primary-btn">
-            EXPLORE THE EXHIBITION <span>→</span>
-          </a>
-
-          <div class="hero-note">
-            <span>01 / 20</span>
-            A VISUAL JOURNEY THROUGH THE ENGLISH LANGUAGE
-          </div>
-
+        <div class="hero-actions">
+          <a href="#gallery" class="btn btn-primary">EXPLORE THE 20 IDIOMS ↗</a>
+          <a href="#about" class="btn btn-outline">DISCOVER OUR PROJECT</a>
         </div>
       </div>
     </section>
 
-    <!-- STATISTICS -->
-
-    <div class="container">
-      <div class="stats">
-
-        <div class="stat">
-          <strong>20</strong>
-          <span>English Idioms</span>
-        </div>
-
-        <div class="stat">
-          <strong>20</strong>
-          <span>Visual Posters</span>
-        </div>
-
-        <div class="stat">
-          <strong>07</strong>
-          <span>Team Exhibition</span>
-        </div>
-
+    <!-- STATS -->
+    <section class="stats" aria-label="Project highlights">
+      <div class="stat">
+        <strong>20</strong>
+        <span>English Idioms</span>
       </div>
-    </div>
+      <div class="stat">
+        <strong>05</strong>
+        <span>Team Members</span>
+      </div>
+      <div class="stat">
+        <strong>01</strong>
+        <span>Creative Exhibition</span>
+      </div>
+    </section>
 
     <!-- ABOUT -->
-
-    <section id="about">
-      <div class="container">
-
-        <div class="about-grid">
-
-          <div class="about-copy">
-
-            <div class="eyebrow">THE CONCEPT</div>
-
-            <h2 class="section-heading">
-              More Than<br>Just Words.
-            </h2>
-
-            <p>
-              An idiom is a phrase whose meaning is different
-              from the literal meaning of its individual words.
-              Idioms make language more expressive, engaging
-              and meaningful.
-            </p>
-
-            <p>
-              This exhibition presents twenty English idioms
-              through visual posters and learning activities,
-              helping visitors understand how these expressions
-              are used in everyday communication.
-            </p>
-
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="about-copy">
+          <span class="eyebrow">ABOUT THE EXHIBITION</span>
+          <div class="section-heading">
+            <h2>Language is more than <em>words.</em></h2>
           </div>
 
-          <div class="about-quote">
-            <blockquote>
-              "Language becomes powerful when meaning comes to life."
-            </blockquote>
-            <span>THE IDEA BEHIND IDIOMS IN ACTION</span>
-          </div>
+          <p>
+            Idioms are expressions whose meanings are different from the
+            literal meanings of the individual words. They add colour,
+            personality and depth to everyday communication.
+          </p>
 
+          <p>
+            <strong class="gold">IDIOMS IN ACTION</strong> is an English
+            exhibition project created by Team 07. It presents 20 selected
+            idioms through visual posters and learning activities to make
+            their meanings easier to understand and remember.
+          </p>
+
+          <p>
+            Our aim is to encourage vocabulary development, creative thinking
+            and confident use of English in everyday situations.
+          </p>
+        </div>
+
+        <div class="about-panel">
+          <div class="quote-mark">“</div>
+          <h3>Understand the expression. Discover the meaning.</h3>
+          <p>
+            Every idiom tells a story. By connecting expressions with
+            situations and examples, we make learning English more engaging,
+            memorable and meaningful.
+          </p>
         </div>
       </div>
     </section>
 
     <!-- POSTER GALLERY -->
-
-    <section class="gallery-section" id="gallery">
+    <section class="section gallery-section" id="gallery">
       <div class="container">
-
-        <div class="gallery-top">
-          <div>
-            <div class="eyebrow">VISUAL COLLECTION</div>
-            <h2 class="section-heading">The Idiom Gallery</h2>
-            <p class="section-description">
-              Twenty expressions. Twenty interpretations.
-              One creative exploration of the English language.
-            </p>
-          </div>
-
-          <div class="gallery-count" id="galleryCount">
-            20 ARTWORKS
-          </div>
+        <div class="section-heading">
+          <span class="eyebrow">THE MAIN EXHIBITION</span>
+          <h2>20 Idioms. <em>20 Expressions.</em></h2>
+          <p>
+            Explore the complete poster collection. Select any poster to
+            view it in a larger format.
+          </p>
         </div>
 
-        <div class="gallery-tools">
+        <div class="gallery-toolbar">
+          <span class="gallery-count" id="galleryCount">20 POSTERS IN THE COLLECTION</span>
           <input
-            type="search"
-            id="posterSearch"
             class="search-box"
-            placeholder="Search poster number..."
+            id="posterSearch"
+            type="search"
+            placeholder="Search poster number (e.g. 05)..."
             aria-label="Search posters"
           >
         </div>
 
-        <div class="gallery" id="posterGallery">
+        <div class="gallery-grid" id="galleryGrid"></div>
 
-          <!-- Posters are generated automatically below. -->
-
+        <div class="empty-state" id="emptyState">
+          No matching poster found. Try another poster number.
         </div>
-
-        <div class="no-results" id="noResults">
-          No posters match your search.
-        </div>
-
       </div>
     </section>
 
     <!-- ACTIVITIES -->
-
-    <section id="activities">
+    <section class="section" id="activities">
       <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">LEARNING THROUGH PARTICIPATION</span>
+          <h2>More than a <em>poster exhibition.</em></h2>
+          <p>
+            The project brings together visual learning, written work
+            and performance to explore English idioms.
+          </p>
+        </div>
 
-        <div class="eyebrow">LEARNING EXPERIENCE</div>
-
-        <h2 class="section-heading">Explore the Project</h2>
-
-        <p class="section-description">
-          Language learning through documentation,
-          performance and creative expression.
-        </p>
-
-        <div class="activities-grid">
-
+        <div class="activity-grid">
           <article class="activity-card">
-
             <div class="activity-number">01</div>
-
             <h3>Idioms Report</h3>
-
             <p>
-              A written collection exploring twenty English
-              idioms, their meanings and their importance
-              in effective English communication.
+              A written collection of 20 English idioms, focusing on
+              their meanings and understanding.
             </p>
-
-            <div class="activity-meta">
-              DOCUMENTATION · RENUKA VARSHINI V
-            </div>
-
           </article>
 
           <article class="activity-card">
-
             <div class="activity-number">02</div>
-
             <h3>Mini-Skit</h3>
-
             <p>
-              A creative performance demonstrating how
-              idiomatic expressions can be used naturally
-              in everyday conversations and situations.
+              A performance-based activity that demonstrates how
+              idiomatic expressions can be used in everyday situations.
             </p>
-
-            <div class="activity-meta">
-              PERFORMANCE · SAKTHIVEL
-            </div>
-
           </article>
 
+          <article class="activity-card">
+            <div class="activity-number">03</div>
+            <h3>Visual Exhibition</h3>
+            <p>
+              A collection of 20 creative posters designed to make
+              idiom meanings easier to explore and remember.
+            </p>
+          </article>
         </div>
       </div>
     </section>
 
     <!-- TEAM -->
-
-    <section class="team-section" id="team">
+    <section class="section team-section" id="team">
       <div class="container">
-
-        <div class="eyebrow">THE PEOPLE BEHIND IT</div>
-
-        <h2 class="section-heading">Meet Team 07</h2>
-
-        <p class="section-description">
-          A collaborative effort in language, creativity
-          and presentation.
-        </p>
+        <div class="section-heading">
+          <span class="eyebrow">THE PEOPLE BEHIND THE PROJECT</span>
+          <h2>Meet the <em>Team.</em></h2>
+          <p>
+            Five members. Different responsibilities. One collaborative
+            English exhibition.
+          </p>
+        </div>
 
         <div class="team-grid">
 
           <article class="team-card">
-            <div class="team-initial">S</div>
+            <span class="team-number">01 / LEADERSHIP</span>
             <h3>Santhosh</h3>
-            <p>Team Leader & Coordinator</p>
+            <p class="team-role">Team Leader & Coordinator</p>
+            <p>
+              Coordinated the team, organised responsibilities and
+              supported the overall execution of the project.
+            </p>
           </article>
 
           <article class="team-card">
-            <div class="team-initial">R</div>
+            <span class="team-number">02 / DOCUMENTATION</span>
             <h3>Renuka Varshini V</h3>
-            <p>Idioms Report</p>
+            <p class="team-role">Idioms Report</p>
+            <p>
+              Prepared the report covering the selected 20 English
+              idioms and their explanations.
+            </p>
           </article>
 
           <article class="team-card">
-            <div class="team-initial">S</div>
+            <span class="team-number">03 / PERFORMANCE</span>
             <h3>Sakthivel</h3>
-            <p>Mini-Skit</p>
+            <p class="team-role">Mini-Skit</p>
+            <p>
+              Took responsibility for the mini-skit activity,
+              presenting idioms through practical situations.
+            </p>
           </article>
 
           <article class="team-card">
-            <div class="team-initial">S</div>
+            <span class="team-number">04 / EXHIBITION</span>
             <h3>Shameera</h3>
-            <p>Exhibition Setup</p>
+            <p class="team-role">Exhibition Setup</p>
+            <p>
+              Managed the exhibition arrangement and presentation
+              setup for the project.
+            </p>
           </article>
 
           <article class="team-card">
-            <div class="team-initial">S</div>
+            <span class="team-number">05 / DIGITAL DESIGN</span>
             <h3>Sabarish</h3>
-            <p>Poster Design & Digital Presentation</p>
+            <p class="team-role">Poster Design & Digital Presentation</p>
+            <p>
+              Designed the idiom posters and developed this digital
+              exhibition website.
+            </p>
           </article>
 
         </div>
-
-        <p class="team-note">
-          Every contribution is part of one collaborative
-          English exhibition.
-        </p>
-
       </div>
     </section>
 
     <!-- QR CODE -->
-
-    <section class="qr-section">
+    <section class="qr-section" id="scan">
       <div class="container">
-
         <div class="qr-panel">
-
-          <div class="qr-copy">
-
-            <div class="eyebrow">SHARE THE EXPERIENCE</div>
-
-            <h2>Explore. Learn. Discover.</h2>
-
+          <div>
+            <span class="eyebrow">TAKE THE EXHIBITION WITH YOU</span>
+            <h2>Scan. Explore. <em class="gold">Learn.</em></h2>
             <p>
-              Scan the QR code to visit the IDIOMS IN ACTION
-              digital exhibition and explore all twenty
-              visual interpretations.
+              Scan this QR code using your phone camera to open the
+              IDIOMS IN ACTION digital exhibition. Explore the posters
+              and discover the world of English idioms.
             </p>
-
+            <p style="margin-top:16px;">
+              <a class="gold" href="https://ssabareesh925-code.github.io/idioms-in-action/" target="_blank" rel="noopener">
+                Open the digital exhibition ↗
+              </a>
+            </p>
           </div>
 
-          <img
-            class="qr-image"
-            id="qrImage"
-            alt="QR code linking to the IDIOMS IN ACTION exhibition"
-          >
-
+          <div>
+            <div class="qr-frame">
+              <img
+                id="qrImage"
+                alt="QR code to open the IDIOMS IN ACTION exhibition"
+                loading="lazy"
+              >
+            </div>
+            <div class="qr-caption">SCAN TO OPEN THE PROJECT</div>
+          </div>
         </div>
       </div>
     </section>
@@ -1217,102 +1211,85 @@
   </main>
 
   <!-- FOOTER -->
-
   <footer>
-    <div class="container">
-
-      <div class="footer-brand">
-        IDIOMS <span>IN ACTION</span>
+    <div class="container footer-main">
+      <div>
+        <div class="footer-brand">IDIOMS <span>IN ACTION</span></div>
+        <p>
+          An English exhibition by Team 07, exploring 20 English idioms
+          through creativity, visual learning and collaborative effort.
+        </p>
       </div>
 
-      <p class="footer-tagline">
-        Language becomes powerful when meaning comes to life.
-      </p>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#gallery">Idioms</a>
+        <a href="#activities">Activities</a>
+        <a href="#team">Team</a>
+        <a href="#scan">QR Exhibition</a>
+      </nav>
+    </div>
 
-      <div class="eyebrow">
-        TEAM 07 · ENGLISH EXHIBITION
-      </div>
+    <div class="credits">
+      <div class="credits-label">DIGITAL PRESENTATION CREDITS</div>
+      <div class="credits-main">Designed &amp; Developed by Sabarish P</div>
+      <div class="credits-role">POSTER DESIGN · DIGITAL PRESENTATION · WEBSITE DEVELOPMENT</div>
+      <div class="credits-sub">TEAM 07 · ENGLISH EXHIBITION · 2026</div>
+    </div>
 
-      <div class="footer-line"></div>
-
-      <p class="developer">
-        DESIGNED & DEVELOPED BY SABARISH P
-      </p>
-
-      <p class="copyright">
-        DIGITAL EXHIBITION · 2026
-      </p>
-
+    <div class="copyright">
+      © 2026 IDIOMS IN ACTION · TEAM 07. ALL RIGHTS RESERVED.
     </div>
   </footer>
 
   <!-- POSTER VIEWER -->
-
-  <div class="modal" id="posterModal"
-    role="dialog" aria-modal="true" aria-label="Poster viewer">
-
-    <button class="modal-close" id="modalClose"
-      aria-label="Close poster viewer">×</button>
-
-    <button class="modal-arrow modal-prev" id="modalPrev"
-      aria-label="Previous poster">‹</button>
-
+  <div class="modal" id="posterModal" role="dialog" aria-modal="true" aria-label="Poster viewer">
     <div class="modal-content">
-      <img id="modalImage" src="" alt="Enlarged idiom poster">
+      <button class="modal-close" id="modalClose" aria-label="Close poster viewer">×</button>
+      <button class="modal-prev" id="modalPrev" aria-label="Previous poster">‹</button>
+      <img id="modalImage" src="" alt="Selected idiom poster">
+      <button class="modal-next" id="modalNext" aria-label="Next poster">›</button>
+      <div class="modal-counter" id="modalCounter"></div>
     </div>
-
-    <button class="modal-arrow modal-next" id="modalNext"
-      aria-label="Next poster">›</button>
-
-    <div class="modal-caption" id="modalCaption"></div>
-
   </div>
 
   <script>
+    // POSTER FILES ARE IN THE ROOT OF THE GITHUB REPOSITORY.
+    // Keep the filenames exactly as idiom-01.png through idiom-20.png.
 
-    /* PROJECT CONFIGURATION */
+    const posterFiles = Array.from({ length: 20 }, (_, index) => {
+      const number = String(index + 1).padStart(2, "0");
+      return `idiom-${number}.png`;
+    });
 
-    const POSTER_COUNT = 20;
+    const galleryGrid = document.getElementById("galleryGrid");
+    const posterSearch = document.getElementById("posterSearch");
+    const galleryCount = document.getElementById("galleryCount");
+    const emptyState = document.getElementById("emptyState");
 
-    // The images are stored in the repository ROOT.
-    // Example: idiom-01.png, idiom-02.png, etc.
+    let currentPosterIndex = 0;
 
-    const posterPath = (number) =>
-      `idiom-${String(number).padStart(2, "0")}.png`;
-
-    const exhibitionURL =
-      "https://ssabareesh925-code.github.io/idioms-in-action/";
-
-    /* CREATE POSTER GALLERY */
-
-    const gallery = document.getElementById("posterGallery");
-
-    const posterImages = [];
-
-    for (let i = 1; i <= POSTER_COUNT; i++) {
-
-      const number = String(i).padStart(2, "0");
-      const imagePath = posterPath(i);
-
+    function createPosterCard(filename, index) {
       const card = document.createElement("article");
       card.className = "poster-card";
-      card.dataset.number = number;
+      card.dataset.number = String(index + 1).padStart(2, "0");
+
+      const imageWrap = document.createElement("div");
+      imageWrap.className = "poster-image-wrap";
 
       const image = document.createElement("img");
-
-      image.className = "poster-image";
-      image.src = imagePath;
-      image.alt = `English idiom poster ${i}`;
+      image.src = filename;
+      image.alt = `English idiom poster ${index + 1}`;
       image.loading = "lazy";
       image.decoding = "async";
 
       const fallback = document.createElement("div");
       fallback.className = "image-fallback";
-
       fallback.innerHTML = `
-        <strong>${number}</strong>
-        <span>Poster image unavailable</span>
-        <small>Check ${imagePath}</small>
+        <strong>Poster ${String(index + 1).padStart(2, "0")}</strong>
+        <span>Image could not be loaded.</span>
+        <span>Check the filename: ${filename}</span>
       `;
 
       image.addEventListener("error", () => {
@@ -1320,177 +1297,140 @@
         fallback.classList.add("visible");
       });
 
+      image.addEventListener("click", () => {
+        openPoster(index);
+      });
+
+      imageWrap.appendChild(image);
+      imageWrap.appendChild(fallback);
+
       const info = document.createElement("div");
       info.className = "poster-info";
-
       info.innerHTML = `
-        <div class="poster-number">IDIOM ${number}</div>
-        <h3>Poster ${i}</h3>
-        <p>Visual interpretation</p>
+        <strong>IDIOM POSTER</strong>
+        <span>NO. ${String(index + 1).padStart(2, "0")}</span>
       `;
 
-      const openButton = document.createElement("button");
-      openButton.className = "poster-open";
-      openButton.type = "button";
-      openButton.textContent = "VIEW ARTWORK ↗";
-
-      openButton.addEventListener("click", () => {
-        openPoster(i);
-      });
-
-      image.addEventListener("click", () => {
-        openPoster(i);
-      });
-
-      info.appendChild(openButton);
-
-      card.appendChild(image);
-      card.appendChild(fallback);
+      card.appendChild(imageWrap);
       card.appendChild(info);
 
-      gallery.appendChild(card);
-
-      posterImages.push({
-        number: i,
-        path: imagePath
-      });
+      return card;
     }
 
-    /* SEARCH POSTERS */
+    function renderGallery() {
+      posterFiles.forEach((filename, index) => {
+        galleryGrid.appendChild(createPosterCard(filename, index));
+      });
 
-    const searchInput = document.getElementById("posterSearch");
-    const galleryCount = document.getElementById("galleryCount");
-    const noResults = document.getElementById("noResults");
+      galleryCount.textContent = `${posterFiles.length} POSTERS IN THE COLLECTION`;
+    }
 
-    searchInput.addEventListener("input", () => {
-
-      const query = searchInput.value.trim().toLowerCase();
+    posterSearch.addEventListener("input", () => {
+      const query = posterSearch.value.trim().toLowerCase();
       const cards = document.querySelectorAll(".poster-card");
-
-      let visible = 0;
+      let visibleCount = 0;
 
       cards.forEach(card => {
-
         const number = card.dataset.number;
-        const title = `poster ${parseInt(number, 10)}`;
-
-        const match =
+        const visible = !query ||
           number.includes(query) ||
-          title.includes(query) ||
-          `idiom ${parseInt(number, 10)}`.includes(query);
+          `poster ${number}`.includes(query) ||
+          `idiom ${number}`.includes(query);
 
-        card.style.display = match ? "" : "none";
+        card.style.display = visible ? "" : "none";
 
-        if (match) visible++;
+        if (visible) visibleCount++;
       });
 
-      galleryCount.textContent =
-        `${visible} / ${POSTER_COUNT} ARTWORKS`;
-
-      noResults.style.display =
-        visible === 0 ? "block" : "none";
+      galleryCount.textContent = `${visibleCount} OF 20 POSTERS SHOWN`;
+      emptyState.style.display = visibleCount === 0 ? "block" : "none";
     });
 
-    /* POSTER MODAL */
+    // POSTER VIEWER
 
-    const modal = document.getElementById("posterModal");
+    const posterModal = document.getElementById("posterModal");
     const modalImage = document.getElementById("modalImage");
-    const modalCaption = document.getElementById("modalCaption");
+    const modalCounter = document.getElementById("modalCounter");
 
-    let currentPoster = 1;
-
-    function openPoster(number) {
-
-      currentPoster = number;
-
-      modalImage.src = posterPath(number);
-      modalImage.alt = `Idiom poster ${number}`;
-
-      modalCaption.textContent =
-        `IDIOM ${String(number).padStart(2, "0")} · POSTER ${number} OF ${POSTER_COUNT}`;
-
-      modal.classList.add("open");
+    function openPoster(index) {
+      currentPosterIndex = index;
+      updateModal();
+      posterModal.classList.add("open");
       document.body.style.overflow = "hidden";
-
-      document.getElementById("modalClose").focus();
     }
 
-    function changePoster(direction) {
-
-      currentPoster += direction;
-
-      if (currentPoster > POSTER_COUNT) {
-        currentPoster = 1;
-      }
-
-      if (currentPoster < 1) {
-        currentPoster = POSTER_COUNT;
-      }
-
-      openPoster(currentPoster);
+    function updateModal() {
+      modalImage.src = posterFiles[currentPosterIndex];
+      modalImage.alt = `English idiom poster ${currentPosterIndex + 1}`;
+      modalCounter.textContent =
+        `POSTER ${String(currentPosterIndex + 1).padStart(2, "0")} / 20`;
     }
 
-    function closeModal() {
-      modal.classList.remove("open");
+    function closePoster() {
+      posterModal.classList.remove("open");
       document.body.style.overflow = "";
+      modalImage.src = "";
     }
 
-    document.getElementById("modalClose")
-      .addEventListener("click", closeModal);
+    function previousPoster() {
+      currentPosterIndex =
+        (currentPosterIndex - 1 + posterFiles.length) % posterFiles.length;
+      updateModal();
+    }
 
-    document.getElementById("modalPrev")
-      .addEventListener("click", () => changePoster(-1));
+    function nextPoster() {
+      currentPosterIndex =
+        (currentPosterIndex + 1) % posterFiles.length;
+      updateModal();
+    }
 
-    document.getElementById("modalNext")
-      .addEventListener("click", () => changePoster(1));
+    document.getElementById("modalClose").addEventListener("click", closePoster);
+    document.getElementById("modalPrev").addEventListener("click", previousPoster);
+    document.getElementById("modalNext").addEventListener("click", nextPoster);
 
-    modal.addEventListener("click", (event) => {
-      if (event.target === modal) closeModal();
+    posterModal.addEventListener("click", event => {
+      if (event.target === posterModal) closePoster();
     });
 
-    document.addEventListener("keydown", (event) => {
+    document.addEventListener("keydown", event => {
+      if (!posterModal.classList.contains("open")) return;
 
-      if (!modal.classList.contains("open")) return;
-
-      if (event.key === "Escape") closeModal();
-
-      if (event.key === "ArrowRight") changePoster(1);
-
-      if (event.key === "ArrowLeft") changePoster(-1);
+      if (event.key === "Escape") closePoster();
+      if (event.key === "ArrowLeft") previousPoster();
+      if (event.key === "ArrowRight") nextPoster();
     });
 
-    /* MOBILE NAVIGATION */
+    // MOBILE NAVIGATION
 
     const menuToggle = document.getElementById("menuToggle");
     const navLinks = document.getElementById("navLinks");
 
     menuToggle.addEventListener("click", () => {
-
       const isOpen = navLinks.classList.toggle("active");
-
       menuToggle.setAttribute("aria-expanded", String(isOpen));
       menuToggle.textContent = isOpen ? "×" : "☰";
     });
 
     navLinks.querySelectorAll("a").forEach(link => {
-
       link.addEventListener("click", () => {
-
         navLinks.classList.remove("active");
-
         menuToggle.setAttribute("aria-expanded", "false");
         menuToggle.textContent = "☰";
       });
     });
 
-    /* QR CODE */
+    // QR CODE: points to the published GitHub Pages website.
 
-    const qrImage = document.getElementById("qrImage");
+    const projectURL =
+      "https://ssabareesh925-code.github.io/idioms-in-action/";
 
-    qrImage.src =
-      "https://api.qrserver.com/v1/create-qr-code/?size=240x240&margin=8&data=" +
-      encodeURIComponent(exhibitionURL);
+    document.getElementById("qrImage").src =
+      "https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=" +
+      encodeURIComponent(projectURL);
 
+    // START THE EXHIBITION
+
+    renderGallery();
   </script>
 
 </body>
